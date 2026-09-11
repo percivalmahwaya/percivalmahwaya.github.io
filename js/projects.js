@@ -6,7 +6,7 @@ const projects = [
         gradient: "linear-gradient(135deg, #1a365d, #2b6cb0)",
         icon: "fas fa-map-marked-alt",
         tags: ["Python", "Scikit-learn", "Streamlit", "Folium", "GeoPandas"],
-        github: "https://github.com/Mahwaya/crime-hotspot-dss",
+        github: "https://github.com/percivalmahwaya/crime-hotspot-dss",
         demo: "https://crime-hotspot-dss-8d2jrkagpvgsegqp6y23d4.streamlit.app/",
         live: true
     },
@@ -17,7 +17,7 @@ const projects = [
         gradient: "linear-gradient(135deg, #2d3748, #e53e3e)",
         icon: "fas fa-chart-bar",
         tags: ["Python", "PRAW", "VADER", "Plotly", "Streamlit", "Pandas"],
-        github: "https://github.com/Mahwaya/team-project-semester4",
+        github: "https://github.com/percivalmahwaya/team-project-semester4",
         demo: "https://team-project-semester4-fp66bvgfdcds39aymanwbp.streamlit.app/",
         live: true
     },
@@ -28,7 +28,7 @@ const projects = [
         gradient: "linear-gradient(135deg, #744210, #d69e2e)",
         icon: "fas fa-rocket",
         tags: ["Python", "Pandas", "Plotly Dash", "Folium", "Machine Learning"],
-        github: "https://github.com/Mahwaya/IBM-Applied-Data-Science-Capstone-Project",
+        github: "https://github.com/percivalmahwaya/IBM-Applied-Data-Science-Capstone-Project",
         live: false
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         gradient: "linear-gradient(135deg, #276749, #48bb78)",
         icon: "fas fa-trophy",
         tags: ["HTML", "CSS", "JavaScript", "QA Testing"],
-        github: "https://github.com/Mahwaya/jrm-traditions-challenge",
+        github: "https://github.com/percivalmahwaya/jrm-traditions-challenge",
         live: false
     },
     {
@@ -48,7 +48,7 @@ const projects = [
         gradient: "linear-gradient(135deg, #44337a, #9f7aea)",
         icon: "fas fa-code",
         tags: ["Python", "OOP", "Design Patterns", "Unit Testing"],
-        github: "https://github.com/Mahwaya/design-patterns-python-projects",
+        github: "https://github.com/percivalmahwaya/design-patterns-python-projects",
         live: false
     }
 ];
