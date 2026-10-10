@@ -1,5 +1,47 @@
 const projects = [
     {
+        id: "bcachesshub",
+        name: "Bulawayo Chess Hub",
+        description: "Multi-tenant digital administration platform for a national chess federation: Swiss tournament pairing with Buchholz tiebreaks, Elo rating engine, Lichess OAuth login, PGN game viewer, EcoCash/InnBucks payments via Paynow, required 2FA for admins. 260 automated tests.",
+        gradient: "linear-gradient(135deg, #1a1a2e, #f5a623)",
+        icon: "fas fa-chess-knight",
+        tags: ["Python", "Django", "PostgreSQL", "Bootstrap", "OAuth", "Railway"],
+        github: "https://github.com/percivalmahwaya/bcaChessHub",
+        demo: "https://web-production-abe9b.up.railway.app",
+        live: true
+    },
+    {
+        id: "fpl-decision-engine",
+        name: "Progeny — FPL Decision Engine",
+        description: "Self-improving Fantasy Premier League prediction engine: two-stage ML model backtested across four seasons, automated via GitHub Actions twice daily, with a live-scored accuracy dashboard comparing the model against baselines every gameweek. Published as a 91KB static site — no framework, no build step.",
+        gradient: "linear-gradient(135deg, #1f7a3d, #d8a222)",
+        icon: "fas fa-chart-line",
+        tags: ["Python", "Pandas", "Scikit-learn", "SQLite", "GitHub Actions"],
+        github: "https://github.com/percivalmahwaya/fpl-decision-engine",
+        demo: "https://percivalmahwaya.github.io/fpl-decision-engine",
+        live: true
+    },
+    {
+        id: "osp-scout",
+        name: "OSP Scout",
+        description: "Multi-user companion app built on the FPL engine above, for a friend group of Fantasy Premier League managers. Installable PWA (and signed Android app) with a formation-based pitch view and transfer suggestions per person — no FPL login ever required, just a public team ID.",
+        gradient: "linear-gradient(135deg, #1D1A16, #AD7A2E)",
+        icon: "fas fa-mobile-alt",
+        tags: ["JavaScript", "PWA", "Android", "Cloudflare Pages"],
+        demo: "https://progeny-app.pages.dev",
+        live: true
+    },
+    {
+        id: "chess-economics",
+        name: "Chess Economics Research: Below 2700",
+        description: "Data journalism report investigating how titled chess players below the elite level actually earn a living, prompted by a grandmaster's 2026 retirement statement. Designed a stratified-random sampling methodology across 150+ players on five continents, with AI-assisted research execution and interactive data visualization.",
+        gradient: "linear-gradient(135deg, #211D18, #AD7A2E)",
+        icon: "fas fa-chess-pawn",
+        tags: ["Research Design", "Data Visualization", "Statistical Sampling"],
+        demo: "https://claude.ai/code/artifact/e84e0453-effe-4de7-be22-605cacd501a9",
+        live: true
+    },
+    {
         id: "crime-hotspot-dss",
         name: "Crime Hotspot Prediction DSS",
         description: "Command Decision Support System built on my MSc thesis. Random Forest model (AUC-ROC 0.9663) classifies 275 police beats into three patrol tiers. Interactive choropleth map, resource allocation tables, and full model explainability.",
@@ -63,6 +105,9 @@ function createProjectCards() {
         const demoBtn = project.demo
             ? `<a href="${project.demo}" target="_blank" class="btn btn-project-demo">Live App</a>`
             : '';
+        const githubBtn = project.github
+            ? `<a href="${project.github}" target="_blank" class="btn btn-read"><i class="fab fa-github mr-1"></i> GitHub</a>`
+            : '<span class="text-muted" style="font-size:0.85em;">Private repo</span>';
 
         const card = document.createElement('div');
         card.className = 'col-md-4 mb-4';
@@ -79,9 +124,7 @@ function createProjectCards() {
                     <div style="margin-top:8px;">${tagsHTML}</div>
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center" style="background:transparent;border-top:1px solid #f0f0f0;">
-                    <a href="${project.github}" target="_blank" class="btn btn-read">
-                        <i class="fab fa-github mr-1"></i> GitHub
-                    </a>
+                    ${githubBtn}
                     ${demoBtn}
                 </div>
             </div>
