@@ -38,12 +38,17 @@ directory and the `includeHTML()` helper are removed.
 **Keep `fetch()` but render a static fallback nav underneath it.** Rejected — strictly more code
 than inlining, and now two copies of the nav that can disagree.
 
-**Server-side includes / Jekyll layouts.** GitHub Pages does run Jekyll, so `{% include %}` would
-work with no local build step and would genuinely solve the duplication. Rejected for now because
-it couples the repo to Jekyll's build on GitHub's side — a category of failure that is invisible
-locally and only shows up as a broken deploy, which is precisely the failure mode this project
-family has been bitten by repeatedly. Reconsider alongside the build-step question in
-`decisions/0001` if the page count grows.
+**Server-side includes / Jekyll layouts.** GitHub Pages can run Jekyll, so a Jekyll include tag
+would work with no local build step and would genuinely solve the duplication. Rejected because it
+couples the repo to Jekyll's build on GitHub's side — a category of failure that is invisible
+locally and only shows up as a broken deploy.
+
+> **That argument proved itself immediately, at this document's own expense.** The first sentence
+> of this section originally contained a literal Jekyll include tag, inside backticks. Jekyll
+> evaluates Liquid *before* markdown, so the backticks protected nothing: it tried to resolve an
+> include with no file argument, and the Pages build hung — green push, no error surfaced, old
+> site served. Fixed by adding `.nojekyll`, which switches Jekyll off entirely. The site is plain
+> static HTML and wants none of it, and builds are now instant. **Do not delete `.nojekyll`.**
 
 **A small Node script that stamps the shell into each page.** Rejected — that is a build step, see
 `decisions/0001`.
