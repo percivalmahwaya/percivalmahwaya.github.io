@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects — Percival Mahwaya</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Percival Mahwaya</title>
+<meta name="description" content="Live systems, machine learning pipelines and research projects — most of them open source, several running in production right now.">
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body style="background-color: #f9f9f9;">
+<body>
 
-    <div id="header-placeholder"></div>
+<a class="skip" href="#main">Skip to content</a>
 
-    <main class="container py-5">
-        <section class="content mb-4 text-center">
-            <h1 class="section-title">Projects</h1>
-            <div class="section-divider"></div>
-            <p class="text-muted">A selection of data science and software projects — from live deployed apps to academic research.</p>
-        </section>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html">P<em>M</em></a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
 
-        <section class="row" id="projects-container">
-            <!-- Cards injected by projects.js -->
-        </section>
-    </main>
+<main id="main">
 
-    <div id="footer-placeholder"></div>
+  <section class="shell hero" style="padding-bottom: var(--s5);">
+    <div class="meta-row"><span>Projects</span><span>Live systems &amp; research</span></div>
+    <h1 class="name" style="font-size: clamp(2.5rem, 8vw, 5rem);">
+      Things I have
+      <span class="surname">built</span>
+    </h1>
+    <p class="prose measure prose--muted">
+      Ordered roughly by how much of it is still running. Where a project is live you can open it
+      yourself; where the code is public you can read it. The ones marked private are private
+      because they hold other people's data, not because there is nothing to see.
+    </p>
+    <div class="rule"></div>
+  </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/projects.js"></script>
+  <section class="shell section">
+    <p class="section__label"><i>(01)</i> All projects</p>
+    <div class="work" id="projects-container">
+      <!-- cards injected by js/projects.js -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="shell foot">
+  <p>Percival Mahwaya &copy; 2026 — built by hand, no framework</p>
+  <span class="foot__links">
+    <a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:mahwayapercival@gmail.com">Email</a>
+  </span>
+</footer>
+
+<script src="js/site.js"></script>
+<script src="js/projects.js"></script>
 </body>
 </html>

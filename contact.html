@@ -1,71 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Percival Mahwaya</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Percival Mahwaya</title>
+<meta name="description" content="Open to PhD opportunities, research collaborations, and data science or platform engineering roles.">
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body style="background-color: #f9f9f9;">
+<body>
 
-    <div id="header-placeholder"></div>
+<a class="skip" href="#main">Skip to content</a>
 
-    <main class="container text-center py-5">
-        <h1 class="section-title">Contact</h1>
-        <div class="section-divider"></div>
-        <p class="text-muted mb-5">Open to PhD opportunities, research collaborations, and data science roles.</p>
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html">P<em>M</em></a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
 
-        <div class="row justify-content-center">
+<main id="main">
 
-            <div class="col-md-8">
-                <div id="contact-info">
+  <section class="shell hero" style="padding-bottom: var(--s5);">
+    <div class="meta-row"><span>Contact</span><span>Usually replies within a day</span></div>
+    <h1 class="name" style="font-size: clamp(2.5rem, 8vw, 5rem);">
+      Let's
+      <span class="surname">talk</span>
+    </h1>
+    <p class="prose measure prose--muted">
+      Open to PhD opportunities and research collaborations, and to data science, ML and
+      platform engineering roles. If you found something here you want to dig into, email is
+      the fastest way.
+    </p>
+    <div class="rule"></div>
+  </section>
 
-                    <div class="contact-item">
-                        <i class="fas fa-envelope fa-2x mb-2" style="color: #1a365d;"></i>
-                        <p><a href="mailto:mahwayapercival@gmail.com" class="contact-link">mahwayapercival@gmail.com</a></p>
-                    </div>
+  <section class="shell section">
+    <p class="section__label"><i>(01)</i> Direct</p>
+    <dl class="contact-list">
+      <div class="contact-row">
+        <dt>Email</dt>
+        <dd><a href="mailto:mahwayapercival@gmail.com">mahwayapercival@gmail.com</a></dd>
+      </div>
+      <div class="contact-row">
+        <dt>LinkedIn</dt>
+        <dd><a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">linkedin.com/in/percivalmahwaya</a></dd>
+      </div>
+      <div class="contact-row">
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">github.com/percivalmahwaya</a></dd>
+      </div>
+      <div class="contact-row">
+        <dt>Phone</dt>
+        <dd>(+48) 510 175 341</dd>
+      </div>
+      <div class="contact-row">
+        <dt>Based in</dt>
+        <dd>Katowice, Poland</dd>
+      </div>
+    </dl>
 
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin fa-2x mb-2" style="color: #0A66C2;"></i>
-                        <p>
-                            <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" class="contact-link">
-                                linkedin.com/in/percivalmahwaya
-                            </a>
-                        </p>
-                    </div>
+    <div class="actions" style="margin-top: var(--s6);">
+      <a class="btn btn--solid" href="mailto:mahwayapercival@gmail.com">Send an email</a>
+      <a class="btn" href="projects.html">See the work &rarr;</a>
+    </div>
+  </section>
 
-                    <div class="contact-item">
-                        <i class="fab fa-github fa-2x mb-2" style="color: #333;"></i>
-                        <p>
-                            <a href="https://github.com/percivalmahwaya" target="_blank" class="contact-link">
-                                github.com/percivalmahwaya
-                            </a>
-                        </p>
-                    </div>
+</main>
 
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt fa-2x mb-2" style="color: #1a365d;"></i>
-                        <p class="text-muted">Katowice, Poland</p>
-                    </div>
+<footer class="shell foot">
+  <p>Percival Mahwaya &copy; 2026 — built by hand, no framework</p>
+  <span class="foot__links">
+    <a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:mahwayapercival@gmail.com">Email</a>
+  </span>
+</footer>
 
-                    <div class="contact-item">
-                        <i class="fas fa-phone fa-2x mb-2" style="color: #1a365d;"></i>
-                        <p class="text-muted">(+48) 510 175 341</p>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <div id="footer-placeholder"></div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

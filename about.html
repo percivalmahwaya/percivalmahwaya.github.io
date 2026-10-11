@@ -1,137 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Percival Mahwaya</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Percival Mahwaya</title>
+<meta name="description" content="Background: six years in law-enforcement IT in Zimbabwe, an MSc in Data Science, and a DevOps engineering track in progress.">
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body style="background-color: #f9f9f9;">
+<body>
 
-    <div id="header-placeholder"></div>
+<a class="skip" href="#main">Skip to content</a>
 
-    <main class="container py-5">
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html">P<em>M</em></a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
 
-        <section class="content mb-4 text-center">
-            <h1 class="section-title">About Me</h1>
-            <div class="section-divider"></div>
-            <p class="lead text-muted" style="max-width:720px;margin:0 auto;">
-                I'm a data scientist with a background that spans law enforcement IT in Zimbabwe, software QA, and academic research in machine learning for public safety.
-                My MSc thesis built a crime hotspot prediction system for an African urban context — an area with limited published research — which now forms the basis of a deployed Streamlit application.
-                I'm currently pursuing opportunities in applied ML research, with a PhD in predictive policing or AI ethics as my primary direction.
-            </p>
-        </section>
+<main id="main">
 
-        <hr class="my-5">
+  <section class="shell hero" style="padding-bottom: var(--s5);">
+    <div class="meta-row"><span>About</span><span>Background &amp; experience</span></div>
+    <h1 class="name" style="font-size: clamp(2.5rem, 8vw, 5rem);">
+      The short
+      <span class="surname">version</span>
+    </h1>
+    <div class="prose measure">
+      <p>
+        I spent six years inside Zimbabwe's Ministry of Home Affairs working on the data systems
+        that law enforcement actually runs on — training officers, auditing records, and
+        maintaining secure communications. That is where I learned what a wrong record costs when
+        somebody acts on it.
+      </p>
+      <p class="prose--muted">
+        I moved to Poland, finished a BSc in IT security and an MSc in Data Science at Akademia
+        WSB, and wrote a thesis on machine learning for crime hotspot prediction in an African
+        urban context — an area with very little published research. I am now working through a
+        DevOps engineering track, and building production systems in the evenings.
+      </p>
+    </div>
+    <div class="rule"></div>
+  </section>
 
-        <!-- Experience -->
-        <section class="experience mb-4">
-            <h2 class="section-title">Experience</h2>
+  <section class="shell section">
+    <p class="section__label"><i>(01)</i> Experience</p>
+    <div class="entries">
 
-            <div class="job">
-                <h5>Functional Quality Assurance Tester</h5>
-                <p>Keywords Studios &mdash; Katowice, Poland &nbsp;|&nbsp; April 2025 – Present</p>
-                <ul>
-                    <li>200+ weekly functional and regression test cases across PS5, Xbox, and PC (AAA titles)</li>
-                    <li>500+ bugs logged in JIRA with 97% reproduction accuracy</li>
-                    <li>Agile/Scrum delivery team with 95%+ on-time sprint completion</li>
-                </ul>
-            </div>
+      <article class="entry">
+        <div class="entry__head">
+          <h2 class="entry__role">Functional Quality Assurance Tester</h2>
+          <span class="entry__when">Apr 2025 — Present</span>
+        </div>
+        <p class="entry__org">Keywords Studios — Katowice, Poland</p>
+        <ul>
+          <li>200+ weekly functional and regression test cases across PS5, Xbox and PC on AAA titles</li>
+          <li>500+ bugs logged in JIRA at 97% reproduction accuracy</li>
+          <li>Agile delivery team sustaining 95%+ on-time sprint completion</li>
+        </ul>
+      </article>
 
-            <div class="job">
-                <h5>English Teacher (Native Level)</h5>
-                <p>Akademia Montessori &mdash; Katowice, Poland &nbsp;|&nbsp; September 2019 – June 2024</p>
-                <ul>
-                    <li>Delivered native-level English instruction across primary-school age groups</li>
-                    <li>Parallel to full-time BSc studies at Akademia WSB</li>
-                </ul>
-            </div>
+      <article class="entry">
+        <div class="entry__head">
+          <h2 class="entry__role">English Teacher (Native Level)</h2>
+          <span class="entry__when">Sep 2019 — Jun 2024</span>
+        </div>
+        <p class="entry__org">Akademia Montessori — Katowice, Poland</p>
+        <ul>
+          <li>Native-level English instruction across primary-school age groups</li>
+          <li>Taught in parallel with full-time BSc study</li>
+        </ul>
+      </article>
 
-            <div class="job">
-                <h5>IT Trainer &amp; Data Compliance Officer / Police Officer</h5>
-                <p>Ministry of Home Affairs &mdash; Zimbabwe &nbsp;|&nbsp; August 2013 – August 2019</p>
-                <ul>
-                    <li>Delivered cybersecurity and IT training to 300+ officers</li>
-                    <li>Introduced data validation and audit procedures that improved data accuracy by 25%</li>
-                    <li>Managed secure communications infrastructure and white-collar crime investigation data</li>
-                    <li>6 years at the intersection of law enforcement operations and data systems — the foundation for my research direction</li>
-                </ul>
-            </div>
-        </section>
+      <article class="entry">
+        <div class="entry__head">
+          <h2 class="entry__role">IT Trainer &amp; Data Compliance Officer</h2>
+          <span class="entry__when">Aug 2013 — Aug 2019</span>
+        </div>
+        <p class="entry__org">Ministry of Home Affairs — Zimbabwe</p>
+        <ul>
+          <li>Delivered cybersecurity and IT training to 300+ officers</li>
+          <li>Introduced data validation and audit procedures that improved record accuracy by 25%</li>
+          <li>Managed secure communications infrastructure and white-collar crime investigation data</li>
+          <li>Six years at the intersection of law-enforcement operations and data systems — the foundation for everything since</li>
+        </ul>
+      </article>
 
-        <hr class="my-5">
+    </div>
+  </section>
 
-        <!-- Education -->
-        <section class="education mb-4">
-            <h2 class="section-title">Education</h2>
+  <section class="shell section">
+    <p class="section__label"><i>(02)</i> Education</p>
+    <div class="entries">
 
-            <div class="education-item">
-                <h5>MSc Computer Science — Data Science</h5>
-                <p>Akademia WSB, Dąbrowa Górnicza, Poland &nbsp;|&nbsp; October 2024 – 2026 &nbsp;|&nbsp; <strong>GPA 4.79 / 5.0</strong></p>
-                <ul style="color:#444;">
-                    <li>Thesis: <em>Crime Hotspot Prediction System — Comparative ML Study in an African Urban Context</em></li>
-                    <li>Coursework: Machine Learning, Statistical Analysis, Data Mining, Big Data Processing, Data Visualization</li>
-                    <li>JSA similarity score: 1% (submitted June 2026)</li>
-                </ul>
-            </div>
+      <article class="entry">
+        <div class="entry__head">
+          <h2 class="entry__role">MSc Computer Science — Data Science</h2>
+          <span class="entry__when">2024 — 2026 · 4.79 / 5.0</span>
+        </div>
+        <p class="entry__org">Akademia WSB, Dąbrowa Górnicza, Poland</p>
+        <ul>
+          <li>Thesis: <em>Applying Machine Learning to Crime Hotspot Prediction — A Decision Support Model for Public Safety Resource Allocation</em></li>
+          <li>Awarded a distinction for the thesis, and a second distinction in the "Ambassador of Positive Energy" category</li>
+          <li>Machine learning, statistical analysis, data mining, big data processing, visualisation</li>
+        </ul>
+      </article>
 
-            <div class="education-item">
-                <h5>BSc Computer Science — Security and Continuity of IT</h5>
-                <p>Akademia WSB &nbsp;|&nbsp; September 2019 – April 2024 &nbsp;|&nbsp; <strong>GPA 4.39 / 5.0</strong></p>
-                <ul style="color:#444;">
-                    <li>Focus: IT security, systems continuity, secure data infrastructure, databases, networking</li>
-                </ul>
-            </div>
-        </section>
+      <article class="entry">
+        <div class="entry__head">
+          <h2 class="entry__role">BSc Computer Science — Security and Continuity of IT</h2>
+          <span class="entry__when">2019 — 2024 · 4.39 / 5.0</span>
+        </div>
+        <p class="entry__org">Akademia WSB</p>
+        <ul>
+          <li>IT security, systems continuity, secure data infrastructure, databases, networking</li>
+        </ul>
+      </article>
 
-        <!-- Resume -->
-        <section class="text-center my-5">
-            <a href="contact.html" class="resume-button">Get in Touch</a>
-        </section>
+    </div>
+  </section>
 
-        <hr class="my-5">
+  <section class="shell section">
+    <p class="section__label"><i>(03)</i> What I work with</p>
+    <h2 class="section__title">Tools I have actually <em>shipped with</em>.</h2>
+    <div class="tags" style="gap: var(--s2);">
+      <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+      <span class="tag">Scikit-learn</span><span class="tag">Machine Learning</span>
+      <span class="tag">Django</span><span class="tag">PostgreSQL</span><span class="tag">SQLite</span>
+      <span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">Terraform</span>
+      <span class="tag">GitHub Actions</span><span class="tag">Linux (RHEL)</span><span class="tag">Bash</span>
+      <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Cloudflare</span>
+      <span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">GeoPandas</span>
+      <span class="tag">Folium</span><span class="tag">HTML / CSS / JS</span><span class="tag">Git</span>
+      <span class="tag">JIRA</span><span class="tag">Agile / Scrum</span><span class="tag">Power BI</span>
+    </div>
+    <div class="actions" style="margin-top: var(--s5);">
+      <a class="btn btn--solid" href="contact.html">Get in touch</a>
+      <a class="btn" href="projects.html">See the work &rarr;</a>
+    </div>
+  </section>
 
-        <!-- Skills -->
-        <section class="skills text-center mb-5">
-            <h2 class="section-title">Skills</h2>
-            <div class="section-divider"></div>
-            <div>
-                <div class="tech-badge">Python</div>
-                <div class="tech-badge">Pandas</div>
-                <div class="tech-badge">NumPy</div>
-                <div class="tech-badge">Scikit-learn</div>
-                <div class="tech-badge">Machine Learning</div>
-                <div class="tech-badge">Plotly</div>
-                <div class="tech-badge">Streamlit</div>
-                <div class="tech-badge">GeoPandas</div>
-                <div class="tech-badge">Folium</div>
-                <div class="tech-badge">VADER Sentiment</div>
-                <div class="tech-badge">PRAW (Reddit API)</div>
-                <div class="tech-badge">SQL</div>
-                <div class="tech-badge">PostgreSQL</div>
-                <div class="tech-badge">SQLite</div>
-                <div class="tech-badge">Power BI</div>
-                <div class="tech-badge">AWS (S3, RDS)</div>
-                <div class="tech-badge">Azure</div>
-                <div class="tech-badge">Git / GitHub</div>
-                <div class="tech-badge">JIRA</div>
-                <div class="tech-badge">Agile / Scrum</div>
-                <div class="tech-badge">HTML / CSS / JS</div>
-                <div class="tech-badge">Jupyter Notebooks</div>
-                <div class="tech-badge">Excel</div>
-                <div class="tech-badge">Linux (RHEL)</div>
-            </div>
-        </section>
+</main>
 
-    </main>
+<footer class="shell foot">
+  <p>Percival Mahwaya &copy; 2026 — built by hand, no framework</p>
+  <span class="foot__links">
+    <a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:mahwayapercival@gmail.com">Email</a>
+  </span>
+</footer>
 
-    <div id="footer-placeholder"></div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
