@@ -23,10 +23,18 @@ both baselines on overall prediction error *and* loses to them on high-returning
 halves appear, or neither does. This is the whole reason the site is credible rather than just
 confident.
 
-**4. Nothing is claimed as live that is not verified live.**
-Before any "LIVE" badge or live link ships, the URL is actually fetched and confirmed to respond.
-A link that requires a login, or an artifact that has not been shared, is not live — it is labelled
-accurately or it is not linked.
+**4. Nothing is claimed as live that is not verified live — and for an app, verified means loaded
+in a real browser.**
+Before any "LIVE" badge or live link ships, the URL is confirmed to actually serve the thing it
+claims to. A link that requires a login, or an artifact that has not been shared, is not live — it
+is labelled accurately or it is not linked.
+
+**A status code is not a verification.** This rule was violated by the very first check run under
+it: a bare `curl` of the Crime Hotspot DSS returned `303` to a Streamlit auth endpoint, which was
+read as a login wall and shipped as "not live". Loading it in a browser showed a fully working
+public app — the redirect is a cookie handshake every browser completes automatically. For any
+JavaScript application, open it and look at it; `curl` can only prove a server answered, never
+that a reader gets the page.
 
 **5. Navigation exists in the delivered HTML of every page.**
 No `fetch()`-injected header or footer. The nav must work with JavaScript disabled and must not

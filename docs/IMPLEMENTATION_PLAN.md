@@ -103,10 +103,19 @@ payload nothing on the site used.
    1.09 px of its gold border sat visible at the top-left of every page, in both themes. Invisible
    in source, obvious on render. Re-hidden with a height-independent transform so it cannot recur
    if the font or padding changes.
-2. **A live claim that was not true.** Invariant 4 forced an actual fetch of every URL before
-   badging it. The Crime Hotspot DSS — his MSc thesis app, linked from the portfolio *and* his
-   LinkedIn — returns **HTTP 303 to a login wall**, so it is not publicly reachable. It is no
-   longer marked live. Without the invariant this would have shipped as a working link again.
+2. ~~**A live claim that was not true.** The Crime Hotspot DSS returns HTTP 303 to a login wall,
+   so it is not publicly reachable.~~ **THIS FINDING WAS WRONG — corrected 2026-10-11.**
+   The app is fully live and public. A bare `curl` returns `303` to
+   `share.streamlit.io/-/auth/app`, which *looks* like a login wall; it is Streamlit's cookie
+   handshake, which every browser completes automatically before rendering. Loading the URL in a
+   real browser shows the working app — title, 275 beats, 1,165,354 records, all five pages.
+   The status code was real, the inference from it was not.
+
+   **The lesson is the one already in `feedback_verify_deployed_config.md`: a diagnosis that fits
+   the symptom is not a verified one.** Invariant 4 was right to demand a check and wrong in how
+   the check was run; it has been amended to require a real browser load for any JS app, because
+   `curl` can only prove a server answered, never that a reader gets the page. The entry is struck
+   through rather than deleted so the error stays visible.
 3. **A label that was accurate but wrong.** The chess economics report fell through to the
    "Private repo" branch, implying a repo exists and is hidden. There is no repo — the report
    *is* the output. Now labelled explicitly rather than inferred.

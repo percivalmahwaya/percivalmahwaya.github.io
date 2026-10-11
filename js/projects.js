@@ -54,15 +54,19 @@ const projects = [
     {
         id: "crime-hotspot-dss",
         name: "Crime Hotspot Prediction DSS",
-        description: "My MSc thesis built into a decision support system. A Random Forest model (AUC-ROC 0.9663) sorts 275 police beats into three patrol tiers, with an interactive choropleth, resource allocation tables and full model explainability.",
+        description: "My MSc thesis built into a decision support system. A Random Forest model (AUC-ROC 0.9663) sorts 275 Chicago police beats into three patrol tiers from 1.17 million crime records, with an interactive beat map, resource allocation tables and full model explainability.",
         tags: ["Python", "Scikit-learn", "Streamlit", "Folium", "GeoPandas"],
         stats: [["0.9663", "AUC-ROC"], ["275", "Beats classified"]],
         kicker: "Machine learning · MSc thesis",
         github: "https://github.com/percivalmahwaya/crime-hotspot-dss",
-        // Deliberately NOT marked live: the hosted app redirects to a login wall
-        // (HTTP 303, verified 2026-10-11), so it is not publicly reachable.
-        // Invariant 4 — nothing is claimed live that is not verified live.
-        live: false
+        demo: "https://crime-hotspot-dss-8d2jrkagpvgsegqp6y23d4.streamlit.app/",
+        demoLabel: "Open the app",
+        // Live — confirmed by loading it in a real browser 2026-10-11.
+        // A bare curl returns 303 to share.streamlit.io/-/auth/app, which looks
+        // like a login wall and is not one: it is Streamlit's cookie handshake,
+        // which any browser completes automatically before rendering the app.
+        // Status codes alone cannot verify a JS app. See invariant 4.
+        live: true
     },
     {
         id: "sipdids-dashboard",
@@ -72,6 +76,12 @@ const projects = [
         stats: [["5", "Data sources"], ["5", "Team members"]],
         kicker: "Team project · Data mining",
         github: "https://github.com/percivalmahwaya/team-project-semester4",
+        demo: "https://team-project-semester4-fp66bvgfdcds39aymanwbp.streamlit.app/",
+        demoLabel: "Open the dashboard",
+        // Reachable by anyone, but NOT badged live: Streamlit's free tier puts it
+        // to sleep after inactivity, so a visitor may land on a "wake this app"
+        // screen first (verified anonymously 2026-10-11). Publicly accessible,
+        // not continuously running — the badge would overclaim.
         live: false
     },
     {
