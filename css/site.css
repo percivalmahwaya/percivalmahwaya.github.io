@@ -317,12 +317,11 @@ img { max-width: 100%; display: block; }
   .intro { grid-template-columns: 220px 1fr; align-items: start; }
 }
 .intro__photo {
-  width: 100%; max-width: 220px;
+  width: 100%; max-width: 220px; height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 20%;
   border: 1px solid var(--line);
-  filter: grayscale(1) contrast(1.05);
 }
 
 /* ===================== stats ===================== */
@@ -479,7 +478,7 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--muted); min-width: 7rem;
 }
-.contact-row dd { margin: 0; }
+.contact-row dd { margin: 0; overflow-wrap: anywhere; min-width: 0; }
 
 /* ===================== footer ===================== */
 
@@ -494,6 +493,119 @@ img { max-width: 100%; display: block; }
 .foot a { color: var(--muted); text-decoration: none; }
 .foot a:hover { color: var(--accent); }
 .foot__links { display: flex; gap: var(--s4); flex-wrap: wrap; }
+
+/* ===================== v2 additions (ADR 0004) =====================
+   Tokens only. Nothing below carries a literal colour (invariant 6). */
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* availability strip */
+.status {
+  display: flex; flex-wrap: wrap; align-items: center; gap: var(--s1) var(--s4);
+  align-self: flex-start;
+  font-family: var(--mono); font-size: var(--t-small);
+  color: var(--muted);
+  background: var(--raised);
+  border: 1px solid var(--line);
+  padding: var(--s2) var(--s3);
+}
+.status .dot { color: var(--ink); }
+.status #clock { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* status dots that are not "live". The word always travels with the dot
+   (invariant 10), and the dot is hollow so it differs from live without hue. */
+.dot--idle { color: var(--muted); }
+.dot--idle::before {
+  background: transparent; box-shadow: none;
+  border: 1.5px solid var(--muted); box-sizing: border-box;
+}
+
+/* screenshots */
+.shot { margin: 0; display: flex; flex-direction: column; gap: var(--s1); }
+.shot img {
+  width: 100%; height: auto;
+  border: 1px solid var(--line); background: var(--raised);
+}
+.shot figcaption, .card__media figcaption {
+  font-family: var(--mono); font-size: 0.66rem;
+  color: var(--muted); letter-spacing: 0.04em; line-height: 1.5;
+}
+.card__media { margin: calc(-1 * var(--s4)) calc(-1 * var(--s4)) 0; }
+.card__media img {
+  width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top center;
+  border-bottom: 1px solid var(--line); background: var(--raised);
+}
+.card__media figcaption { padding: var(--s1) var(--s4) 0; }
+
+/* research: a table that doubles as a bar chart */
+.research { display: grid; gap: var(--s6); grid-template-columns: 1fr; }
+@media (min-width: 900px) { .research { grid-template-columns: 1.15fr 1fr; align-items: start; } }
+
+.finding {
+  border-left: 2px solid var(--accent-flat);
+  padding-left: var(--s3);
+  display: flex; flex-direction: column; gap: var(--s2);
+}
+.finding__fig {
+  font-family: var(--display); font-weight: 900; font-size: var(--t-stat);
+  line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums;
+}
+
+.bars { width: 100%; border-collapse: collapse; font-size: var(--t-small); }
+.bars caption {
+  text-align: left; padding-bottom: var(--s2);
+  font-family: var(--mono); font-size: var(--t-label);
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+}
+.bars th, .bars td { padding: var(--s1) 0; vertical-align: middle; }
+.bars th[scope="row"] { text-align: left; font-weight: 500; padding-right: var(--s3); white-space: nowrap; }
+.bars td.num {
+  text-align: right; padding-left: var(--s3);
+  font-family: var(--mono); font-variant-numeric: tabular-nums;
+}
+.bars tr.lead th, .bars tr.lead td.num { font-weight: 700; color: var(--ink); }
+.bars .track { width: 100%; }
+.bar {
+  display: block; height: 0.6rem; width: var(--v);
+  background: color-mix(in srgb, var(--muted) 55%, var(--ground));
+}
+.bars tr.lead .bar { background: var(--accent-flat); }
+.bars tfoot td { padding-top: var(--s2); }
+
+/* case-study pages */
+.crumbs {
+  font-family: var(--mono); font-size: var(--t-label);
+  text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+}
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--accent); }
+
+.case-top { display: grid; gap: var(--s5); grid-template-columns: 1fr; }
+@media (min-width: 900px) { .case-top--shot { grid-template-columns: 1.2fr 1fr; align-items: start; } }
+.case-top--phone .shot { max-width: 280px; }
+
+.cs { display: grid; gap: 0; margin: 0; }
+.cs__row {
+  display: grid; grid-template-columns: 1fr; gap: var(--s2);
+  padding: var(--s4) 0; border-top: 1px solid var(--line);
+}
+@media (min-width: 820px) { .cs__row { grid-template-columns: 11rem 1fr; gap: var(--s5); } }
+.cs dt {
+  font-family: var(--mono); font-size: var(--t-label);
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted);
+}
+.cs dd { margin: 0; display: flex; flex-direction: column; gap: var(--s3); max-width: var(--measure); }
+.cs dd ul { margin: 0; padding-left: var(--s4); display: flex; flex-direction: column; gap: var(--s1); }
+.cs__row--fail dt { color: var(--accent); }
+
+.facts { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+.src {
+  font-family: var(--mono); font-size: 0.68rem; line-height: 1.5;
+  color: var(--muted); overflow-wrap: anywhere;
+}
 
 /* ===================== motion / print ===================== */
 
@@ -513,6 +625,8 @@ img { max-width: 100%; display: block; }
     --muted: #444; --line: #bbb; --accent: #6b4712;
   }
   .masthead, .toggle, .burger, .scroll-cue, .skip { display: none !important; }
+  .status { border: 0; padding-left: 0; }
+  .card__media img, .shot img { max-width: 60%; }
   .section { page-break-inside: avoid; border-top: 1px solid #bbb; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.7em; color: #555; }
   .rule::after { transform: scaleX(1); }

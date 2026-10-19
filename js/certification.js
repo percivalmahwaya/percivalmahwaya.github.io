@@ -13,7 +13,7 @@ const certifications = [
         link2label: "Coursera"
     },
     {
-        title: "AWS Certified Solutions Architect — Associate",
+        title: "AWS Certified Solutions Architect: Associate",
         issuer: "Amazon Web Services",
         period: "2025 – 2028",
         link: "https://www.credly.com/badges/30ffa6bf-264e-4a64-b65c-333e2964a075/linked_in_profile"

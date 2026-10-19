@@ -1,0 +1,93 @@
+{
+ "champion": "two_stage_ml",
+ "model_changes": [
+  {
+   "gameweek": 6,
+   "model": "two_stage_ml",
+   "change": "Goalkeepers entered training for the first time.",
+   "detail": "The archive spelled goalkeeper GK and the rest of the system spelled it GKP, so 12,500 rows, 11% of the archive, had never reached training, and the is_gkp feature was a constant zero while 71 keepers a week were predicted anyway. Scores before GW6 come from a model that had never seen a goalkeeper, so they are not strictly comparable with those after it."
+  }
+ ],
+ "models": [
+  "form_fdr",
+  "naive_form",
+  "two_stage_ml",
+  "two_stage_opp"
+ ],
+ "scored": [
+  {
+   "gameweek": 4,
+   "model": "form_fdr",
+   "n": 654,
+   "mae": 1.213,
+   "mae_high_return": 4.572
+  },
+  {
+   "gameweek": 4,
+   "model": "naive_form",
+   "n": 654,
+   "mae": 1.277,
+   "mae_high_return": 4.601
+  },
+  {
+   "gameweek": 4,
+   "model": "two_stage_ml",
+   "n": 656,
+   "mae": 1.126,
+   "mae_high_return": 5.353
+  },
+  {
+   "gameweek": 5,
+   "model": "form_fdr",
+   "n": 659,
+   "mae": 1.15,
+   "mae_high_return": 4.545
+  },
+  {
+   "gameweek": 5,
+   "model": "naive_form",
+   "n": 659,
+   "mae": 1.205,
+   "mae_high_return": 4.5
+  },
+  {
+   "gameweek": 5,
+   "model": "two_stage_ml",
+   "n": 659,
+   "mae": 1.048,
+   "mae_high_return": 5.116
+  },
+  {
+   "gameweek": 6,
+   "model": "form_fdr",
+   "n": 667,
+   "mae": 1.121,
+   "mae_high_return": 4.792
+  },
+  {
+   "gameweek": 6,
+   "model": "naive_form",
+   "n": 667,
+   "mae": 1.228,
+   "mae_high_return": 4.751
+  },
+  {
+   "gameweek": 6,
+   "model": "two_stage_ml",
+   "n": 667,
+   "mae": 1.001,
+   "mae_high_return": 5.195
+  },
+  {
+   "gameweek": 6,
+   "model": "two_stage_opp",
+   "n": 667,
+   "mae": 1.069,
+   "mae_high_return": 5.068
+  }
+ ],
+ "pending": [
+  7,
+  8
+ ]
+}

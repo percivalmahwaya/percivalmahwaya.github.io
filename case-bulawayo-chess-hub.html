@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bulawayo Chess Hub case study | Percival Mahwaya</title>
+<meta name="description" content="A Django system for chess clubs: pairing, ratings, payments and public pages. Two payment bypasses and one outage, with the fixes.">
+<link rel="canonical" href="https://percivalmahwaya.github.io/case-bulawayo-chess-hub.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bulawayo Chess Hub case study | Percival Mahwaya">
+<meta property="og:description" content="A Django system for chess clubs: pairing, ratings, payments and public pages. Two payment bypasses and one outage, with the fixes.">
+<meta property="og:url" content="https://percivalmahwaya.github.io/case-bulawayo-chess-hub.html">
+<meta property="og:image" content="https://percivalmahwaya.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Percival Mahwaya, data and platform engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0D0D0B" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Percival Mahwaya","url":"https://percivalmahwaya.github.io/","image":"https://percivalmahwaya.github.io/assets/images/portrait.jpg","jobTitle":"Data and Platform Engineer","email":"mailto:mahwayapercival@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Katowice","addressCountry":"PL"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Akademia WSB"},"sameAs":["https://github.com/percivalmahwaya","https://linkedin.com/in/percivalmahwaya"]}
+</script>
+<!-- Theme stamp runs BEFORE first paint. ADR 0002: applying it after paint
+     produces a visible flash of the wrong theme. localStorage can throw
+     (private windows, blocked site data) so it is wrapped | invariant 7. -->
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html">P<em>M</em></a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="shell section">
+    <p class="crumbs"><a href="projects.html">Projects</a> / Case study</p>
+    <p class="section__label">Django · PostgreSQL</p>
+    <h1 class="section__title">Bulawayo Chess Hub: software a real association runs on.</h1>
+  </section>
+  <section class="shell section">
+    <div class="case-top case-top--shot">
+      <figure class="shot"><img src="assets/shots/bulawayo-chess-hub-home.webp" width="1200" height="358" alt="Home page of Bulawayo Chess Hub"><figcaption>Local build with an empty database. Not the live site.</figcaption></figure>
+      <div class="facts"><div class="stat"><span class="stat__fig">260</span><span class="stat__cap">Automated tests, every app covered</span><span class="stat__src">Source: test function count, bcaChessHub, 2026-10-19</span></div><div class="stat"><span class="stat__fig">8</span><span class="stat__cap">Django apps in one multi-tenant project</span><span class="stat__src">Source: README.md</span></div><div class="stat"><span class="stat__fig">2</span><span class="stat__cap">Live payment bypasses found and closed in September 2026</span><span class="stat__src">Source: CHANGELOG.md, 2026-09-13/15</span></div></div>
+    </div>
+  </section>
+  <section class="shell section">
+    <dl class="cs">
+      <div class="cs__row"><dt>Problem</dt><dd><p>Chess clubs need to register members, pair rounds fairly, keep ratings and take entry fees. The Bulawayo Chess Association needed that in one system with public standings and no spreadsheet.</p></dd></div>
+      <div class="cs__row"><dt>Constraint</dt><dd><p>Payments run through Paynow (EcoCash and InnBucks). Hosting is Railway. Every model is scoped to an association so more clubs can use the same deployment.</p></dd></div>
+      <div class="cs__row"><dt>Decisions</dt><dd><ul><li>Tournament sections (Open, Ladies, Developmental) pair independently but share one round schedule and board numbering.</li><li>The model keeps its historical name, <code>Association</code>, while the interface says "club", because five other apps hold foreign keys to it. <code>/associations/</code> redirects to <code>/clubs/</code>.</li><li>Publish a public <code>/security/</code> page listing what is and is not secured, with no claim I cannot verify.</li><li>Add <code>qa_production.py</code>, which checks the deployed system (live variables, boot guards, HTTPS) and not only the code.</li><li>Require two-factor authentication for administrators.</li></ul></dd></div>
+      <div class="cs__row"><dt>Result</dt><dd><p>260 automated tests with every app covered. Swiss pairing with Buchholz tiebreaks, an Elo engine (K=32, start 1200), Lichess sign-in, PGN replay, CSV and print export.</p><p class="src">Sources: README.md, CHANGELOG.md, members/middleware.py in bcaChessHub.</p></dd></div>
+      <div class="cs__row cs__row--fail"><dt>What went wrong</dt><dd><p>Two security faults and one outage reached production.</p><ul><li>An unverified Paynow callback hash and a sandbox-mode default left a free-approval endpoint reachable. Closed on 2026-09-13/15.</li><li>On 2026-09-06 a Railway Free-plan credit limit took the site down. Postgres sat in a separate project, so production had been running on ephemeral SQLite. I moved to the Hobby plan, put Postgres in the same project and rotated the secret key out of source.</li></ul><p class="src">Source: CHANGELOG.md.</p></dd></div>
+      <div class="cs__row"><dt>Not yet verified</dt><dd><p>This page does not show live production data. The screenshot is a local build with an empty database. Open the live site to see the real one.</p></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="shell foot">
+  <p>Percival Mahwaya &copy; 2026. Built by hand, no framework.</p>
+  <span class="foot__links">
+    <a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:mahwayapercival@gmail.com">Email</a>
+  </span>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>

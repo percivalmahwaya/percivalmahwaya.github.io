@@ -3,11 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Percival Mahwaya — Data Scientist &amp; DevOps Engineer</title>
-<meta name="description" content="Data scientist and DevOps engineer in training. MSc Data Science, six years in law-enforcement IT, and live systems you can open and inspect.">
+<title>Percival Mahwaya | Data and Platform Engineer</title>
+<meta name="description" content="Data and platform engineer in Katowice, Poland. MSc Data Science. Three live systems with public accuracy records, test counts and known failures.">
+<link rel="canonical" href="https://percivalmahwaya.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Percival Mahwaya | Data and Platform Engineer">
+<meta property="og:description" content="Live systems with public accuracy records, test counts and known failures.">
+<meta property="og:url" content="https://percivalmahwaya.github.io/">
+<meta property="og:image" content="https://percivalmahwaya.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Percival Mahwaya, data and platform engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0D0D0B" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Percival Mahwaya","url":"https://percivalmahwaya.github.io/","image":"https://percivalmahwaya.github.io/assets/images/portrait.jpg","jobTitle":"Data and Platform Engineer","email":"mailto:mahwayapercival@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Katowice","addressCountry":"PL"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Akademia WSB"},"sameAs":["https://github.com/percivalmahwaya","https://linkedin.com/in/percivalmahwaya"]}
+</script>
 <!-- Theme stamp runs BEFORE first paint. ADR 0002: applying it after paint
      produces a visible flash of the wrong theme. localStorage can throw
-     (private windows, blocked site data) so it is wrapped — invariant 7. -->
+     (private windows, blocked site data) so it is wrapped | invariant 7. -->
 <script>
   try {
     var t = localStorage.getItem("theme");
@@ -45,12 +63,10 @@
 
 <main id="main">
 
-  <!-- ===================== HERO ===================== -->
   <section class="shell hero">
     <div class="meta-row">
-      <span>Portfolio — 2026</span>
       <span>Katowice, Poland</span>
-      <span>via Bulawayo, Zimbabwe</span>
+      <span>from Bulawayo, Zimbabwe</span>
     </div>
 
     <h1 class="name">
@@ -59,102 +75,107 @@
     </h1>
 
     <div class="identity">
-      <span><b>role:</b> "data scientist", "devops engineer (training)", "builder"</span>
-      <span><b>ships:</b> live systems, not slide decks</span>
+      <span><b>role:</b> data and platform engineer</span>
+      <span><b>ships:</b> live systems with public test counts and known failures</span>
     </div>
+
+    <p class="status" id="availability">
+      <span class="dot">Open to roles and research</span>
+      <span>Katowice <span id="clock">CET/CEST</span></span>
+      <span>Replies by email</span>
+    </p>
 
     <div class="rule"></div>
 
     <div class="foot-row">
-      <p class="roles">MSc Data Science · AWS SAA · Django · Python · Docker · Terraform</p>
-      <a class="scroll-cue" href="#intro">Selected work <span aria-hidden="true">&darr;</span></a>
+      <p class="roles">MSc Data Science · AWS SAA · Python · Django · Docker · Terraform</p>
+      <a class="scroll-cue" href="#work">Selected work <span aria-hidden="true">&darr;</span></a>
     </div>
   </section>
 
-  <!-- ===================== 01 INTRODUCTION ===================== -->
   <section class="shell section" id="intro">
     <p class="section__label"><i>(01)</i> Introduction</p>
     <div class="intro">
-      <img class="intro__photo" src="assets/images/photo.jpg" alt="Percival Mahwaya">
+      <img class="intro__photo" src="assets/images/portrait.jpg" width="440" height="550" alt="Percival Mahwaya, portrait">
       <div>
-        <h2 class="section__title">I build systems that <em>run</em>, and then keep running.</h2>
+        <h2 class="section__title">I build systems that <em>run</em>, then keep them running.</h2>
         <div class="prose measure">
           <p>
-            Six years inside law-enforcement IT in Zimbabwe taught me what happens when a data
-            system is wrong and someone acts on it anyway. That is still the thing I care about:
-            not whether a model scores well on a slide, but whether the thing holds up in
-            production, on a bad day, with real people depending on it.
+            Six years in law-enforcement IT in Zimbabwe showed you what happens when a data
+            system is wrong and someone acts on it anyway. You see that in how I build now.
+            Each project below states its test count, its error rate and what it gets wrong.
           </p>
           <p class="prose--muted">
-            I finished an MSc in Data Science at Akademia WSB in 2026, and I am working through a
-            DevOps engineering track now. In between, I ship: a chess federation runs its
-            tournaments on software I wrote; a prediction engine retrains and publishes itself
-            twice a day without me touching it. Everything on this page is open, live, or both —
-            you should not have to take my word for any of it.
+            I finished an MSc in Data Science at Akademia WSB in 2026. I am working through a
+            DevOps track. A chess federation runs its tournaments on software I wrote. A
+            prediction engine retrains and republishes itself every three hours.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== 02 BY THE NUMBERS ===================== -->
-  <section class="shell section">
+  <section class="shell section" id="numbers">
     <p class="section__label"><i>(02)</i> By the numbers</p>
-    <h2 class="section__title">Every figure here is <em>checkable</em>.</h2>
+    <h2 class="section__title">Every figure names its <em>source</em>.</h2>
 
     <div class="stats">
       <div class="stat">
         <span class="stat__wip">Work in progress</span>
-        <span class="stat__fig">1.048</span>
-        <span class="stat__cap">Prediction error (MAE) of my FPL model in gameweek 5 — against 1.150 and 1.205 for the two baselines it competes with.</span>
-        <span class="stat__src">Source: accuracy.json, live-scored each gameweek — percivalmahwaya.github.io/fpl-decision-engine</span>
+        <span class="stat__fig" data-fact="fpl_mae">1.001</span>
+        <span class="stat__cap">Prediction error (MAE) of my FPL model in gameweek <span data-fact="fpl_gw">6</span>. The two baselines score <span data-fact="fpl_mae_base_a">1.121</span> and <span data-fact="fpl_mae_base_b">1.228</span>. Lower is better.</span>
+        <span class="stat__src">Source: accuracy.json, recomputed by tools/facts.py on every push</span>
       </div>
 
       <div class="stat">
         <span class="stat__fig">260</span>
         <span class="stat__cap">Automated tests in Bulawayo Chess Hub, the platform a real federation uses.</span>
-        <span class="stat__src">Source: generated test count, 2026-10-01 — github.com/percivalmahwaya/bcaChessHub</span>
+        <span class="stat__src">Source: count of test functions in github.com/percivalmahwaya/bcaChessHub, 2026-10-19</span>
       </div>
 
       <div class="stat">
-        <span class="stat__fig">4.79</span>
-        <span class="stat__cap">MSc Data Science grade average, out of 5.0. Thesis awarded a distinction.</span>
-        <span class="stat__src">Source: Akademia WSB diploma no. 37725, conferred June 2026</span>
+        <span class="stat__fig">0.966</span>
+        <span class="stat__cap">AUC-ROC of the Random Forest in my MSc thesis. The next best model scores 0.867.</span>
+        <span class="stat__src">Source: data/model_comparison.csv in crime-hotspot-dss</span>
       </div>
 
       <div class="stat">
         <span class="stat__fig">6</span>
-        <span class="stat__cap">Years in law-enforcement IT and data compliance before moving into data science.</span>
-        <span class="stat__src">Source: Ministry of Home Affairs, Zimbabwe, 2013–2019</span>
+        <span class="stat__cap">Years in law-enforcement IT and data compliance before data science.</span>
+        <span class="stat__src">Self-reported. Ministry of Home Affairs, Zimbabwe, 2013 to 2019</span>
       </div>
     </div>
 
     <p class="caveat">
-      On that first number, the honest version: my model has the best overall error of the three,
-      and the <em>worst</em> error on high-returning players — 5.116 against the baselines' 4.500.
-      It wins on the average and loses on the half that actually decides a gameweek. That is
-      published on the engine's own scoreboard rather than quietly left out, because a number you
-      cannot check is not worth putting on a page.
+      The first number needs context. My model has the best overall error of the three, and the
+      worst error on high-returning players: <span data-fact="fpl_hr">5.195</span> against
+      <span data-fact="fpl_hr_base_lo">4.751</span> to <span data-fact="fpl_hr_base_hi">4.792</span>
+      for the baselines. It wins on the average and loses on the players who decide a gameweek.
+      Only <span data-fact="fpl_gw_count">3</span> gameweeks are scored so far, so treat it as an early reading.
+      The engine publishes this on its own scoreboard.
     </p>
   </section>
 
-  <!-- ===================== 03 SELECTED WORK ===================== -->
-  <section class="shell section">
+  <section class="shell section" id="work">
     <p class="section__label"><i>(03)</i> Selected work</p>
-    <h2 class="section__title">Three things you can <em>open right now</em>.</h2>
+    <h2 class="section__title">Three systems. Each has a <em>case study</em>.</h2>
 
     <div class="work">
 
       <article class="card">
+        <figure class="card__media">
+          <img src="assets/shots/bulawayo-chess-hub-home.webp" width="1200" height="358" loading="lazy" alt="Home page of Bulawayo Chess Hub">
+          <figcaption>Local build, empty database. Not the live site.</figcaption>
+        </figure>
         <div class="card__top">
           <span>Django · PostgreSQL</span>
           <span class="dot">Live</span>
         </div>
         <h3 class="card__title">Bulawayo Chess Hub</h3>
         <p class="card__desc">
-          Tournament administration for a chess federation: Swiss pairing with Buchholz
-          tiebreaks, an Elo rating engine, Lichess sign-in, PGN replay, and EcoCash payments.
-          Two-factor authentication is mandatory for administrators.
+          Tournament administration for a chess association. Swiss pairing with Buchholz
+          tiebreaks, an Elo engine, Lichess sign-in, PGN replay and EcoCash payments through
+          Paynow. Administrators must use two-factor authentication.
         </p>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">Django</span>
@@ -162,60 +183,71 @@
         </div>
         <div class="card__stats">
           <span class="card__stat"><b>260</b><span>Tests</span></span>
-          <span class="card__stat"><b>7</b><span>Apps</span></span>
+          <span class="card__stat"><b>8</b><span>Apps</span></span>
         </div>
         <div class="actions">
-          <a class="btn btn--solid" href="https://web-production-abe9b.up.railway.app" target="_blank" rel="noopener">Open the site</a>
+          <a class="btn btn--solid" href="case-bulawayo-chess-hub.html">Case study</a>
+          <a class="btn" href="https://web-production-abe9b.up.railway.app" target="_blank" rel="noopener">Live site</a>
           <a class="btn" href="https://github.com/percivalmahwaya/bcaChessHub" target="_blank" rel="noopener">Code</a>
         </div>
       </article>
 
       <article class="card">
+        <figure class="card__media">
+          <img src="assets/shots/fpl-engine-accuracy.webp" width="1200" height="750" loading="lazy" alt="Accuracy scoreboard of the FPL Decision Engine">
+          <figcaption>Captured from the live site in a real browser.</figcaption>
+        </figure>
         <div class="card__top">
           <span>Machine learning · CI/CD</span>
           <span class="dot">Live</span>
         </div>
-        <h3 class="card__title">Progeny — FPL Decision Engine</h3>
+        <h3 class="card__title">FPL Decision Engine</h3>
         <p class="card__desc">
-          A prediction engine that runs itself: collects data, retrains, predicts, scores its own
-          past accuracy against two baselines and republishes — twice a day, on a schedule, with
-          no input from me. The front end is a 91 KB static page with no framework.
+          Collects data, retrains, predicts, scores its own past accuracy against two
+          baselines and republishes every three hours with no input from me. Four models are
+          compared. The scoreboard shows where the champion loses.
         </p>
         <div class="tags">
           <span class="tag">Scikit-learn</span><span class="tag">Pandas</span>
           <span class="tag">SQLite</span><span class="tag">GitHub Actions</span>
         </div>
         <div class="card__stats">
-          <span class="card__stat"><b>4</b><span>Seasons backtested</span></span>
-          <span class="card__stat"><b>91 KB</b><span>Page weight</span></span>
+          <span class="card__stat"><b>4</b><span>Models compared</span></span>
+          <span class="card__stat"><b data-fact="fpl_gw_count">3</b><span>Gameweeks scored</span></span>
         </div>
         <div class="actions">
-          <a class="btn btn--solid" href="https://percivalmahwaya.github.io/fpl-decision-engine" target="_blank" rel="noopener">Open the engine</a>
+          <a class="btn btn--solid" href="case-fpl-decision-engine.html">Case study</a>
+          <a class="btn" href="https://percivalmahwaya.github.io/fpl-decision-engine" target="_blank" rel="noopener">Live site</a>
           <a class="btn" href="https://github.com/percivalmahwaya/fpl-decision-engine" target="_blank" rel="noopener">Code</a>
         </div>
       </article>
 
       <article class="card">
+        <figure class="card__media">
+          <img src="assets/shots/osp-scout-verdict.webp" width="560" height="1077" loading="lazy" alt="The Verdict screen of OSP Scout, rendered from a test fixture">
+          <figcaption>Test fixture, not a real squad.</figcaption>
+        </figure>
         <div class="card__top">
-          <span>PWA · Android</span>
+          <span>PWA · read-only</span>
           <span class="dot">Live</span>
         </div>
         <h3 class="card__title">OSP Scout</h3>
         <p class="card__desc">
-          The engine above, turned into something a friend group can actually use: each person
-          sees their own squad, their own transfer suggestions, their own captain. Installable as
-          an app, signed for Android, and it never asks anyone to log into their real account.
+          A Fantasy Premier League companion for about a dozen friends. It opens on the one
+          decision that matters this week, explains why and links to the exact FPL screen.
+          It holds no passwords and cannot write to anyone's account.
         </p>
         <div class="tags">
           <span class="tag">JavaScript</span><span class="tag">PWA</span>
-          <span class="tag">Cloudflare</span><span class="tag">Bubblewrap</span>
+          <span class="tag">Cloudflare Pages</span><span class="tag">GitHub Actions</span>
         </div>
         <div class="card__stats">
-          <span class="card__stat"><b>0</b><span>Passwords stored</span></span>
-          <span class="card__stat"><b>$0</b><span>Running cost</span></span>
+          <span class="card__stat"><b>169</b><span>Test assertions</span></span>
+          <span class="card__stat"><b>0</b><span>Credentials held</span></span>
         </div>
         <div class="actions">
-          <a class="btn btn--solid" href="https://progeny-app.pages.dev" target="_blank" rel="noopener">Open the app</a>
+          <a class="btn btn--solid" href="case-osp-scout.html">Case study</a>
+          <a class="btn" href="https://osp-scout.pages.dev" target="_blank" rel="noopener">Live app</a>
           <span class="note">Private repo</span>
         </div>
       </article>
@@ -227,10 +259,48 @@
     </div>
   </section>
 
-  <!-- ===================== 04 ELSEWHERE ===================== -->
-  <section class="shell section">
-    <p class="section__label"><i>(04)</i> Elsewhere</p>
-    <h2 class="section__title">Open to research, data and platform <em>work</em>.</h2>
+  <section class="shell section" id="research">
+    <p class="section__label"><i>(04)</i> Research</p>
+    <h2 class="section__title">MSc thesis: crime hotspots and <em>patrol tiers</em>.</h2>
+
+    <div class="research">
+      <div class="prose">
+        <p>
+          <em>Applying Machine Learning to Crime Hotspot Prediction: A Decision Support Model
+          for Public Safety Resource Allocation.</em> Akademia WSB, 2026. Awarded a distinction.
+        </p>
+        <p>
+          The model predicts which Chicago police beats are hotspots. The thesis then ranks
+          beats by how stable that status is across five years, 2019 to 2023, and turns the
+          ranking into three patrol tiers.
+        </p>
+        <div class="finding">
+          <span class="finding__fig">34.2%</span>
+          <p>of beats are hotspots in all five years. These are Tier 1, the persistent hotspots. 30.2% are Tier 2 (hotspot in one to four years). 35.6% are Tier 3 (never).</p>
+          <p class="src">Source: thesis Table 6, as built into app.py in crime-hotspot-dss</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn--solid" href="https://crime-hotspot-dss-8d2jrkagpvgsegqp6y23d4.streamlit.app/" target="_blank" rel="noopener">Open the dashboard</a>
+          <a class="btn" href="https://github.com/percivalmahwaya/crime-hotspot-dss" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <table class="bars">
+        <caption>Model comparison, AUC-ROC</caption>
+        <tbody>
+          <tr class="lead"><th scope="row">Random Forest</th><td class="track"><span class="bar" style="--v:96.6%"></span></td><td class="num">0.966</td></tr>
+          <tr><th scope="row">KNN</th><td class="track"><span class="bar" style="--v:86.7%"></span></td><td class="num">0.867</td></tr>
+          <tr><th scope="row">SVM</th><td class="track"><span class="bar" style="--v:77.2%"></span></td><td class="num">0.772</td></tr>
+          <tr><th scope="row">Logistic Regression</th><td class="track"><span class="bar" style="--v:65.4%"></span></td><td class="num">0.654</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3" class="src">Source: data/model_comparison.csv. Random Forest also leads on accuracy (0.878) and MCC (0.759).</td></tr></tfoot>
+      </table>
+    </div>
+  </section>
+
+  <section class="shell section" id="contact">
+    <p class="section__label"><i>(05)</i> Contact</p>
+    <h2 class="section__title">Open to data, platform and research <em>roles</em>.</h2>
     <div class="actions">
       <a class="btn btn--solid" href="mailto:mahwayapercival@gmail.com">Email me</a>
       <a class="btn" href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
@@ -242,7 +312,7 @@
 </main>
 
 <footer class="shell foot">
-  <p>Percival Mahwaya &copy; 2026 — built by hand, no framework</p>
+  <p>Percival Mahwaya &copy; 2026. Built by hand, no framework.</p>
   <span class="foot__links">
     <a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
     <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">LinkedIn</a>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://percivalmahwaya.github.io/sitemap.xml

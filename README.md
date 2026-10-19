@@ -72,3 +72,9 @@ source and obvious on render.
 Check, at minimum: all five pages, both themes, 1440 px and 390 px, zero console errors, no
 horizontal page scroll, the theme toggle round-trips and survives a reload, and the nav is still
 present with JavaScript disabled.
+
+## v2 tooling
+- `python tools/facts.py --check` fails if any page disagrees with `data/accuracy.json`.
+- `node tools/matrix.mjs` runs every page across engines, themes and widths (needs a server on :8080).
+- `.github/workflows/checks.yml` runs facts, Nu, Lighthouse CI, axe, the matrix and a link check on every push.
+- Docs: `docs/EVIDENCE.md`, `docs/READER_TESTS.md`, `docs/decisions/0004-v2-evidence-led-rebuild.md`.

@@ -73,3 +73,11 @@ section is deleted, not filled.
 Body text and any text-weight accent usage meets WCAG AA (4.5:1) against its own surface in both
 themes. The gold accent is lightened for dark grounds and darkened for light grounds precisely
 because the same hex cannot pass on both.
+
+**13. Self-reported figures are labelled self-reported.**
+A number with no machine or document source (years of service, grades, diploma details) carries the
+words "Self-reported" beside it. It is never styled as if a script produced it. Added in v2, ADR 0004.
+
+**14. Numbers with a machine source are written by `tools/facts.py`, not by hand.**
+Any element carrying `data-fact="key"` is rewritten from `data/accuracy.json`. CI runs
+`python tools/facts.py --check` and fails on drift. Added in v2, ADR 0004.

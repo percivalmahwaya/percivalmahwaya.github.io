@@ -8,7 +8,7 @@ const projects = [
         name: "Bulawayo Chess Hub",
         description: "Tournament administration for a chess federation: Swiss pairing with Buchholz tiebreaks, an Elo rating engine, Lichess sign-in, PGN replay, and EcoCash/InnBucks payments via Paynow. Two-factor authentication is mandatory for administrators.",
         tags: ["Python", "Django", "PostgreSQL", "OAuth", "Railway"],
-        stats: [["260", "Tests"], ["7", "Apps"]],
+        stats: [["260", "Tests"], ["8", "Apps"]],
         kicker: "Django · PostgreSQL",
         github: "https://github.com/percivalmahwaya/bcaChessHub",
         demo: "https://web-production-abe9b.up.railway.app",
@@ -17,10 +17,10 @@ const projects = [
     },
     {
         id: "fpl-decision-engine",
-        name: "Progeny — FPL Decision Engine",
-        description: "A prediction engine that runs itself: collects data, retrains, predicts, scores its own past accuracy against two baselines, and republishes — twice a day on a schedule, with no manual step. Two-stage model backtested across four seasons.",
+        name: "FPL Decision Engine",
+        description: "A prediction engine that runs itself: collects data, retrains, predicts, scores its own past accuracy against two baselines, and republishes every three hours with no manual step. Four models are compared on a public scoreboard that shows where the champion loses.",
         tags: ["Python", "Scikit-learn", "Pandas", "SQLite", "GitHub Actions"],
-        stats: [["4", "Seasons backtested"], ["91 KB", "Page weight"]],
+        stats: [["4", "Models compared"], ["3", "Gameweeks scored"]],
         kicker: "Machine learning · CI/CD",
         github: "https://github.com/percivalmahwaya/fpl-decision-engine",
         demo: "https://percivalmahwaya.github.io/fpl-decision-engine",
@@ -30,11 +30,11 @@ const projects = [
     {
         id: "osp-scout",
         name: "OSP Scout",
-        description: "The FPL engine above turned into something a friend group can use: each person sees their own squad, transfer suggestions and captain pick. Installable as a PWA and signed for Android — and it never asks anyone to log into their real account.",
+        description: "The FPL engine above turned into something a friend group can use. It opens on the one decision that matters this week. Installable as a PWA. It is read-only, holds no credentials and cannot write to anyone's FPL account.",
         tags: ["JavaScript", "PWA", "Android", "Cloudflare Pages"],
-        stats: [["0", "Passwords stored"], ["$0", "Running cost"]],
-        kicker: "PWA · Android",
-        demo: "https://progeny-app.pages.dev",
+        stats: [["169", "Test assertions"], ["0", "Credentials held"]],
+        kicker: "PWA · read-only",
+        demo: "https://osp-scout.pages.dev",
         demoLabel: "Open the app",
         live: true
     },
@@ -86,7 +86,7 @@ const projects = [
     },
     {
         id: "ibm-capstone",
-        name: "IBM Capstone — SpaceX Launch Analysis",
+        name: "IBM Capstone: SpaceX Launch Analysis",
         description: "End-to-end data science project: SpaceX launch records scraped, cleaned and visualised, with an interactive Plotly Dash dashboard, launch site maps and an outcome prediction model.",
         tags: ["Python", "Pandas", "Plotly Dash", "Folium"],
         stats: [["4", "Notebooks"], ["1", "Dash app"]],
@@ -99,21 +99,12 @@ const projects = [
         name: "JRM Youth Traditions Challenge",
         description: "An interactive cultural traditions quiz. Client-side only, no backend, no install. Seven QA bugs found and fixed during testing, plus an achievement badge system.",
         tags: ["HTML", "CSS", "JavaScript", "QA"],
-        stats: [["7", "Bugs fixed"], ["0", "Dependencies"]],
+        stats: [["7", "Bugs fixed"], ["0", "Backends"]],
         kicker: "Web · QA",
         github: "https://github.com/percivalmahwaya/jrm-traditions-challenge",
         live: false
-    },
-    {
-        id: "design-patterns",
-        name: "Python Design Patterns",
-        description: "Implementations of the classic Gang-of-Four design patterns in Python — Factory, Singleton, Observer, Strategy and more — each with a real-world analogy and unit tests.",
-        tags: ["Python", "OOP", "Unit Testing"],
-        stats: [["10+", "Patterns"], ["100%", "Tested"]],
-        kicker: "Python · Fundamentals",
-        github: "https://github.com/percivalmahwaya/design-patterns-python-projects",
-        live: false
     }
+
 ];
 
 function createProjectCards() {

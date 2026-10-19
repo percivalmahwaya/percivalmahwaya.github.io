@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSP Scout case study | Percival Mahwaya</title>
+<meta name="description" content="A read-only Fantasy Premier League companion that holds no credentials. Built around one decision and a rule about FPL terms.">
+<link rel="canonical" href="https://percivalmahwaya.github.io/case-osp-scout.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OSP Scout case study | Percival Mahwaya">
+<meta property="og:description" content="A read-only Fantasy Premier League companion that holds no credentials. Built around one decision and a rule about FPL terms.">
+<meta property="og:url" content="https://percivalmahwaya.github.io/case-osp-scout.html">
+<meta property="og:image" content="https://percivalmahwaya.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Percival Mahwaya, data and platform engineer">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="theme-color" content="#0D0D0B" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Percival Mahwaya","url":"https://percivalmahwaya.github.io/","image":"https://percivalmahwaya.github.io/assets/images/portrait.jpg","jobTitle":"Data and Platform Engineer","email":"mailto:mahwayapercival@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Katowice","addressCountry":"PL"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Akademia WSB"},"sameAs":["https://github.com/percivalmahwaya","https://linkedin.com/in/percivalmahwaya"]}
+</script>
+<!-- Theme stamp runs BEFORE first paint. ADR 0002: applying it after paint
+     produces a visible flash of the wrong theme. localStorage can throw
+     (private windows, blocked site data) so it is wrapped | invariant 7. -->
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (t === "dark" || t === "light") document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Fraunces:ital,opsz,wght@1,9..144,500;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="brand" href="index.html">P<em>M</em></a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+    </button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="shell section">
+    <p class="crumbs"><a href="projects.html">Projects</a> / Case study</p>
+    <p class="section__label">PWA · read-only</p>
+    <h1 class="section__title">OSP Scout: one decision, one tap, no credentials.</h1>
+  </section>
+  <section class="shell section">
+    <div class="case-top case-top--shot case-top--phone">
+      <figure class="shot"><img src="assets/shots/osp-scout-verdict.webp" width="560" height="1077" alt="The Verdict screen of OSP Scout, rendered from a test fixture"><figcaption>Test fixture, not a real squad.</figcaption></figure>
+      <div class="facts"><div class="stat"><span class="stat__fig">169</span><span class="stat__cap">Test assertions across five suites, plus a real-Chrome check of every gameweek phase</span><span class="stat__src">Source: osp-scout README.md</span></div><div class="stat"><span class="stat__fig">0</span><span class="stat__cap">Passwords, tokens or sessions held</span><span class="stat__src">Source: ADR 0002 in osp-scout</span></div><div class="stat"><span class="stat__fig">3 h</span><span class="stat__cap">Pipeline refresh interval</span><span class="stat__src">Source: build workflow cron</span></div></div>
+    </div>
+  </section>
+  <section class="shell section">
+    <dl class="cs">
+      <div class="cs__row"><dt>Problem</dt><dd><p>About a dozen friends in a group play FPL. They need the one decision that matters before a deadline, the reason for it and a fast route to making the change. The job is a changed team, not advice.</p></dd></div>
+      <div class="cs__row"><dt>Constraint</dt><dd><p>FPL terms prohibit a third party controlling an account (clause 27) or automating writes to it (clause 28(d)). I checked this against the 2026/27 terms.</p></dd></div>
+      <div class="cs__row"><dt>Decisions</dt><dd><ul><li>Read-only with a deliberate handoff. The app links to the exact FPL screen and a human makes the change.</li><li>The client may re-select from published numbers and may never compute a new one (ADR 0005).</li><li>Label every recommendation by what it has earned. Captaincy passed a 38-gameweek backtest and shows <b>Backtested</b>. Transfers and lineups have not and show <b>Unproven</b>.</li><li>Open on the surface that matches the real moment in the gameweek, computed from FPL data.</li></ul></dd></div>
+      <div class="cs__row"><dt>Result</dt><dd><p>Live on Cloudflare Pages with a pipeline that refreshes every three hours. I confirmed on my own phone on 2026-10-19 that the handoff lands on the right FPL screen and that stale data carries a real timestamp.</p><p>One of the seven acceptance checks is still untested: confirming a change as "landed" rather than "self-reported". It needs a gameweek in the right phase.</p><p class="src">Source: osp-scout README.md and docs/BRIEF.md. The repository is private.</p></dd></div>
+      <div class="cs__row cs__row--fail"><dt>What went wrong</dt><dd><p>On 2026-10-18 a DOM-wiring bug crashed the page during a live gameweek. Every Node test suite passed, because none of them ran a real browser. I fixed it the same day and added a real-Chrome test across every gameweek phase.</p><p class="src">Source: docs/IMPLEMENTATION_PLAN.md in osp-scout.</p></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="shell foot">
+  <p>Percival Mahwaya &copy; 2026. Built by hand, no framework.</p>
+  <span class="foot__links">
+    <a href="https://github.com/percivalmahwaya" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/percivalmahwaya" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:mahwayapercival@gmail.com">Email</a>
+  </span>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>

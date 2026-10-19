@@ -68,4 +68,18 @@
       }
     });
   }
+
+  var clock = document.getElementById("clock");
+  if (clock && window.Intl) {
+    var tick = function () {
+      var d = new Date();
+      var fmt = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Warsaw", hour: "2-digit", minute: "2-digit",
+        timeZoneName: "short", hour12: false
+      });
+      clock.textContent = fmt.format(d).replace("GMT+", "UTC+");
+    };
+    tick();
+    setInterval(tick, 30000);
+  }
 })();
